@@ -1,0 +1,6 @@
+{
+  "image": "mcr.microsoft.com/vscode/devcontainer/base:ubuntu",
+  "features": {
+      "powershell": "latest" 
+  }
+}
