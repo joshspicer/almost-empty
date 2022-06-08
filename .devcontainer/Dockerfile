@@ -1,7 +1,7 @@
 FROM ubuntu
 
 
-RUN "starting..."
+RUN echo "starting..."
 
 RUN echo "hey there ${GITHUB_USER}"
 
