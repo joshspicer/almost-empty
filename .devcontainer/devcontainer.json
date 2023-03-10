@@ -1,0 +1,6 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+        "ghcr.io/codspace/featuresfork/oryx:1": {}
+    }
+}
