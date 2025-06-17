@@ -1,0 +1,27 @@
+# mitm proxy configuration file
+# This file contains common configuration options for the dev container
+
+# Web interface settings
+web_host: 0.0.0.0
+web_port: 8081
+
+# Proxy settings  
+listen_port: 8080
+listen_host: 0.0.0.0
+
+# Enable web interface by default
+web_open_browser: false
+
+# Logging settings
+flow_detail: 1
+
+# SSL settings
+ssl_insecure: true
+
+# Allow all hosts (dev environment)
+allow_hosts:
+  - ".*"
+
+# Common headers to add for development
+request_headers:
+  X-Dev-Container: "mitm-proxy-enhanced"
