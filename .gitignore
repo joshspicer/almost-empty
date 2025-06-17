@@ -1,0 +1,24 @@
+# mitm proxy files
+.mitmproxy/
+*.pem
+*.p12
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+
+# IDE files
+.vscode/launch.json
+.vscode/tasks.json
+
+# Logs
+*.log
+
+# Temporary files
+.tmp/
+tmp/

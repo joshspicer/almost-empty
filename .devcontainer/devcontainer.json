@@ -1,6 +1,40 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
-   "features": {
-      "ghcr.io/joshspicer/features/mitm-proxy:1": {}
-   }
+  "features": {
+    "ghcr.io/joshspicer/features/mitm-proxy:1": {
+      "webInterface": true,
+      "allowHosts": ".*",
+      "listenPort": "8080"
+    }
+  },
+  "forwardPorts": [8080, 8081],
+  "portsAttributes": {
+    "8080": {
+      "label": "mitm proxy",
+      "onAutoForward": "notify"
+    },
+    "8081": {
+      "label": "mitm web interface",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "humao.rest-client",
+        "rangav.vscode-thunder-client",
+        "ms-vscode.hexeditor",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "containerEnv": {
+    "MITM_PROXY_PORT": "8080",
+    "MITM_WEB_PORT": "8081",
+    "MITM_PROXY_HOST": "0.0.0.0"
+  },
+  "postCreateCommand": "bash .devcontainer/setup-mitm.sh"
 }
